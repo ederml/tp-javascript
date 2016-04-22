@@ -3,6 +3,7 @@ body {
     background: url("../images/background.jpg") no-repeat center top;
     background-color: #e7e8ea;
     width: 100%;
+    font-family: "Bebas Neue";
 
 
 }
@@ -19,7 +20,7 @@ header{
 }
 
 #banner{
-    position: relative;
+    /*position: relative;*/
     padding-left: 73px;
     top: 50%;
     height: 473px;
@@ -41,7 +42,7 @@ header{
 #categories {
 
     height: 307px;
-    position: relative;
+    /*position: relative;*/
     width: 100%;
     margin-top: 30px;
 }
@@ -183,9 +184,74 @@ div ul  {
     background-color: yellow;
     float: right;
 }
+
+
+/***************** Modal ***********************/
+
+#wrap-modal{
+    width: 960px;
+    height: auto;
+    background-color: white;
+}
+
+#wrap-modal-photo{
+    height: 396px;
+    background-color: antiquewhite;
+    }
+#wrap-modal-info{
+
+    width: 100%;
+    height: 100%;
+}
+
+.wrap-modal-info-detail{
+    width: 75%;
+    float: left;
+    background-color: white;
+}
+
+#wrap-modal-info-detail-01{
+    width: 25%;
+    display: inline-block;
+    height: 160px;
+    padding: 10px 25px 40px 25px ;
+}
+
+#wrap-modal-info-prix{
+    float: right;
+    display: inline-block;
+    width: 25%;
+    height: 309px;
+    background-color: #33587e;
+}
+
+#wrap-modal-info-prix-b_saison{
+    width: 79%;
+    height: 144px;
+    background-color: #33587e;
+    padding: 40px 25px 25px 25px ;
+}
+#wrap-modal-info-prix-reserver{
+    width: 79%;
+    height: 35px;
+    background-color: #d87000;
+    padding: 40px 25px 25px 25px ;
+}
+
+
 /************** Footer  ******************/
 
 footer{
+    clear: both;
     height: 90px;
     background-image: url(../images/footer.jpg);
+}
+
+
+/***************** Font ***************/
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../fonts/helveticaneue-bold.otf');
+
 }
