@@ -4,6 +4,24 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+    <style>
+        #cs_tab_controls{
+            width: 60%;
+            margin: auto;
+        }
+        .cs_ongles {
+            display: inline-block;
+            width: 30%;
+            height: 50px;
+            background-color: #d87000;
+        }
+        .cs_for_cat1 {
+            display: inline-block;
+            width: 45%;
+        }
+
+    </style>
 </head>
 <body>
 
@@ -21,9 +39,9 @@
             </div>
             <div class="menu">
                 <ul>
-                    <li><h2><a href="index.html">Accueil</a></h2></li>
-                    <li><h2><a href="catalogue.html">Forfaits</a></h2></li>
-                    <li><h2><a href="reserver.html">Réserver</a></h2></li>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="catalogue.html">Forfaits</a></li>
+                    <li><a href="reserver.html">Réserver</a></li>
                 </ul>
             </div>
 
@@ -37,107 +55,71 @@
 
         <!-- START BODY -->
 
-        <div id="body">
+        <div id="main_catalogue" class="main">
 
             <!-- *********** CATEGORIES ************ -->
-
-                <div id="tab_controls">
-                <div id="header">
-                    <ul id="ongles">
-                        <li>
-
-                            <div class="ongle">
+            <div id="cs_tab_controls">
+                    <ul>
+                        <li class="cs_ongles">
                                 <span>Croisière</span>
-                            </div>
-
                         </li>
-                        <li>
-
-                            <div class="ongle">
-                                <span>Aventure</span>
-                            </div>
-
-                        </li>
-                        <li>
-
-                            <div class="ongle">
+                        <li class="cs_ongles">
                                 <span>Sports d'hiver</span>
-                            </div>
-
                         </li>
-                        <li>
-
-                            <div class="ongle">
+                        <li class="cs_ongles">
                                 <span>Nature</span>
-                            </div>
-
                         </li>
-
                     </ul>
-
-                </div>
-                <div id="for_categorie">
-                    <div class="forfait_categorie">
-                        <div class="for-img">
+            </div>
+            <div class="cs_for_cat1">
+                    <div class="cs_forfait_categorie">
+                        <div class="cs_for_img">
                             <img src="images/cat-img01.jpg" />
-                        </div>
-                        <div class="for-info">
-                            <h3>Tittle</h3>
-                            <h4>Infos</h4>
-                        </div>
-                    </div>
-                    <div class="forfait_categorie2">
-                        <div class="for-img">
-                            <img src="images/cat-img01.jpg" />
-                        </div>
-                        <div class="for-info">
-                            <h3>Tittle</h3>
-                            <h4>Infos</h4>
-                        </div>
-
-                    </div>
-
-                    <div id="for-categorie">
-                        <div class="forfait_categorie">
-                            <div class="for-img">
-                                <img src="images/cat-img01.jpg" />
-                            </div>
-                            <div class="for-info">
-                                <h3>Tittle</h3>
-                                <h4>Infos</h4>
-                            </div>
-                        </div>
-                        <div class="forfait_categorie2">
-                            <div class="for-img">
-                                <img src="images/cat-img01.jpg" />
-                            </div>
-                            <div class="for-info">
-                                <h3>Tittle</h3>
-                                <h4>Infos</h4>
-                            </div>
-
-                        </div>
-                    <!--<div class="forfait">
-                        <div class="for-img">
-                            <img src="images/cat-sport_hiver01.jpg" />
-                        </div>
-                        <div class="for-info">
-                            <h2>Tittle</h2>
-                            <h3>Infos</h3>
+                            <h4>Catégorie</h4>
+                            <h2>L'atlantique emblématique</h2>
+                            <p>Durée du forfait</p>
+                            <p>Début de saison : avril</p>
+                            <p>Fin de saison : décembre</p>
+                            <p>Prix basse saison</p>
                         </div>
                     </div>
-                    <div class="forfait">
-                        <div class="for-img">
-                            <img src="images/cat-sport_hiver01.jpg" />
-                        </div>
-                        <div class="for-info">
-                            <h2>Tittle</h2>
-                            <h3>Infos</h3>
-                        </div>
-                    </div>-->
-
+                <div class="cs_forfait_categorie">
+                    <div class="cs_for_img">
+                        <img src="images/cat-img01.jpg" />
+                        <h4>Catégorie</h4>
+                        <h2>L'atlantique emblématique</h2>
+                        <p>Durée du forfait</p>
+                        <p>Début de saison : avril</p>
+                        <p>Fin de saison : décembre</p>
+                        <p>Prix basse saison</p>
+                    </div>
                 </div>
-              </div>
+            </div>
+            <div class="cs_for_cat1">
+                <div class="cs_forfait_categorie">
+                    <div class="cs_for_img">
+                        <img src="images/cat-img01.jpg" />
+                        <h4>Catégorie</h4>
+                        <h2>L'atlantique emblématique</h2>
+                        <p>Durée du forfait</p>
+                        <p>Début de saison : avril</p>
+                        <p>Fin de saison : décembre</p>
+                        <p>Prix basse saison</p>
+                    </div>
+                </div>
+                <div class="cs_forfait_categorie">
+                    <div class="cs_for_img">
+                        <img src="images/cat-img01.jpg" />
+                        <h4>Catégorie</h4>
+                        <h2>L'atlantique emblématique</h2>
+                        <p>Durée du forfait</p>
+                        <p>Début de saison : avril</p>
+                        <p>Fin de saison : décembre</p>
+                        <p>Prix basse saison</p>
+                    </div>
+                </div>
+            </div>
+
 
         </div><!-- END body -->
 
