@@ -1,14 +1,9 @@
-@font-face {
-    font-family: 'Bebas Neue';
-    src: url('../fonts/helveticaneue-bold.otf');
-
-}
 body {
     margin: 0 auto;
     background: url("../images/background.jpg") no-repeat center top;
     background-color: #e7e8ea;
     width: 100%;
-    font-family: "Bebas Neue";
+    font-family: 'Open Sans', sans-serif;
 
 
 }
