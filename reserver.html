@@ -3,96 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Formulaire de réservation de Boreale Agence de Voyages</title>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
     <style>
-        form{
-            width:100%;
-            margin-bottom: 50px;
-        }
-        fieldset{
-            border:3px solid #d87000;
-            margin-bottom: 20px;
 
-        }
-        legend{
-            padding: 10px 30px;
-        }
 
-        label, input, textarea, select{
-            display: inline-block;
-            vertical-align: middle;
-            margin-bottom: 20px;
-            padding: 2px;
-            box-sizing: border-box;
-
-        }
-        label{
-            width: 20%;
-
-        }
-        input[type="text"], input[type="tel"],input[type="email"], select{
-            height:40px;
-            width:70%;
-        }
-        input[type="date"], input[type="number"]{
-            height:40px;
-        }
-        input[type="number"]{
-            width: 50px;
-        }
-        .right{
-            text-align: right;
-        }
-
-        textarea{
-            width:70%;
-        }
-        #body{
-            height:auto;
-        }
-        input[type="submit"]{
-            text-align: center;
-            width:30%;
-            height:40px;
-            display: block;
-            margin:30px auto;
-        }
-        table{
-            border-collapse: collapse;
-            width:100%;
-        }
-
-        thead tr, tfoot tr, tbody tr{
-            height:40px;
-            padding: 5px;
-        }
-        thead tr, tfoot tr{
-            font-weight: bold;
-        }
-        thead th{
-            background-color: rgba(216, 112, 0, 0.2);
-            text-align: left;
-            padding: 5px;
-        }
-        tfoot td{
-            background-color: rgba(216, 112, 0, 0.1);
-        }
-
-        thead td, tfoot td, tbody td {
-            padding: 5px;
-        }
-        #prix_total{
-            text-align: right;
-            padding-right: 20px;
-            background-color: rgba(216, 112, 0, 0.1);
-        }
-
-    p.msg_erreur{
-        display: none;
-        color:red;
-        margin-left:20%;
-        padding-left: 5px;
-    }
 
     </style>
 
@@ -114,9 +29,9 @@
         </div>
         <div class="menu">
             <ul>
-                <li><h2><a href="index.html">Accueil</a></h2></li>
-                <li><h2><a href="categorie.html">Forfaits</a></h2></li>
-                <li><h2><a href="reserver.html">Réserver</a></h2></li>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="catalogue.html">Forfaits</a></li>
+                <li><a href="reserver.html">Réserver</a></li>
             </ul>
         </div>
 
@@ -130,7 +45,7 @@
 
     <!-- START BODY -->
 
-    <div id="body">
+    <div class="main" id="main_reserver">
 
         <!-- *********** PAS DE SLIDER ***********-->
 

@@ -19,6 +19,15 @@ header{
     height: 110px;
 }
 
+header > div {
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+}
+.social_media ul li {
+    padding: 10px;
+}
+
 #banner{
     /*position: relative;*/
     padding-left: 73px;
@@ -35,8 +44,8 @@ header{
 }
 
 .main{
-    height: 850px;
     margin-top: 55px;
+    margin-bottom:60px;
 }
 
 #categories {
@@ -48,8 +57,6 @@ header{
 }
 #for-content{
     margin-top: 50px;
-    position: absolute;
-    left: 0px;
 
 }
 .forfait{
@@ -101,12 +108,20 @@ header ul li {
 
 }
 .logo{
-    margin-left: 300px;
-    float: left;
+    /*margin-left: 300px;*/
+    /*float: left;*/
 }
 .menu{
-    float: right;
+    /*float: right;*/
+    text-align: right;
+}
+.menu ul {
+    width: 100%;
+    /*float: right;*/
+}
+.menu ul li {
 
+    padding: 20px 50px 20px 0px;
 }
 
 #for-categorie{
@@ -148,10 +163,13 @@ h4{
 }
 a{
     text-decoration: none;
+    text-align: right;
+    display: inline-block;
+    width: 100%;
 }
 
 div ul  {
-    display: inline;
+    /*display: inline;*/
 
 }
 
@@ -248,5 +266,93 @@ footer{
 }
 
 
-/***************** Font ***************/
+/***************** FORM ***************/
 
+form{
+    width:100%;
+    margin-bottom: 50px;
+}
+fieldset{
+    border:3px solid #d87000;
+    margin-bottom: 20px;
+
+}
+legend{
+    padding: 10px 30px;
+}
+
+label, input, textarea, select{
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 20px;
+    padding: 2px;
+    box-sizing: border-box;
+
+}
+label{
+    width: 20%;
+
+}
+input[type="text"], input[type="tel"],input[type="email"], select{
+    height:40px;
+    width:70%;
+}
+input[type="date"], input[type="number"]{
+    height:40px;
+}
+input[type="number"]{
+    width: 50px;
+}
+.right{
+    text-align: right;
+}
+
+textarea{
+    width:70%;
+}
+#body{
+    height:auto;
+}
+input[type="submit"]{
+    text-align: center;
+    width:30%;
+    height:40px;
+    display: block;
+    margin:30px auto;
+}
+table{
+    border-collapse: collapse;
+    width:100%;
+}
+
+thead tr, tfoot tr, tbody tr{
+    height:40px;
+    padding: 5px;
+}
+thead tr, tfoot tr{
+    font-weight: bold;
+}
+thead th{
+    background-color: rgba(216, 112, 0, 0.2);
+    text-align: left;
+    padding: 5px;
+}
+tfoot td{
+    background-color: rgba(216, 112, 0, 0.1);
+}
+
+thead td, tfoot td, tbody td {
+    padding: 5px;
+}
+#prix_total{
+    text-align: right;
+    padding-right: 20px;
+    background-color: rgba(216, 112, 0, 0.1);
+}
+
+p.msg_erreur{
+    display: none;
+    color:red;
+    margin-left:20%;
+    padding-left: 5px;
+}
