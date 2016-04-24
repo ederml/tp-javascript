@@ -6,6 +6,12 @@
     <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
     <style>
+    .display{
+        display:block!important;
+    }
+    .invalid{
+        border:2px solid red;
+    }
 
 
 
@@ -52,57 +58,58 @@
     <h1>Formulaire de réservation</h1>
         <!-- *********** FORM ************ -->
 
-       <form action="" method="get" novalidate>
+       <form action="" method="get" name="form_resa" id="form_resa" novalidate="novalidate">
 
            <!-- INFOS FORFAIT-->
-
+            <button id="btn_test">Btn test</button>
            <fieldset>
                <legend>Votre forfait</legend>
-               <p class="msg_erreur">Veuillez sélectionner un forfait.</p>
+               <p class="msg_erreur" id="erreur_choix_forfait">Veuillez sélectionner un forfait.</p>
                <label for="choix_forfait">Sélectionner votre forfait :</label>
-               <select id="choix_forfait" name="choix_forfaits">
+               <select id="choix_forfait" name="choix_forfait">
                    <optgroup label="Croisière">
-                       <option value="croi_01">L'atlantique emblématique</option>
-                       <option value="croi_02">Capitales scandinaves</option>
-                       <option value="croi_03">Du Groenland au St Laurent</option>
-                       <option value="croi_04">Croisière des ours blancs</option>
-                   </optgroup>
-                   <optgroup label="Aventure">
-                       <option value="aven_01">Trekking du grand nord en hydravion</option>
-                       <option value="aven_02">Chiens et gîtes du grand nord</option>
-                       <option value="aven_03">Au sommet de l'Everest (8850 m.)</option>
-                       <option value="aven_04">Sermilik, la route des icebergs</option>
+                       <option value="0">L'atlantique emblématique</option>
+                       <option value="1">Capitales scandinaves</option>
+                       <option value="2">Du Groenland au St Laurent</option>
+                       <option value="3">Croisière des ours blancs</option>
                    </optgroup>
                    <optgroup label="Sports d'hiver">
-                       <option value="spor_01">Motoneige (Charlevoix, Québec)</option>
-                       <option value="spor_02">Sommets du St Laurent en ski</option>
-                       <option value="spor_03">Ski de fond raquette à Tremblant</option>
-                       <option value="spor_04">Via ferrata des glaces</option>
+                       <option value="4">Motoneige (Charlevoix, Québec)</option>
+                       <option value="5">Sommets du St Laurent en ski</option>
+                       <option value="6">Ski de fond raquette à Tremblant</option>
+                       <option value="7">Via ferrata des glaces</option>
                    </optgroup>
+                   <optgroup label="Aventure">
+                       <option value="8">Trekking du grand nord en hydravion</option>
+                       <option value="9">Chiens et gîtes du grand nord</option>
+                       <option value="10">Au sommet de l'Everest (8850 m.)</option>
+                       <option value="11">Sermilik, la route des icebergs</option>
+                   </optgroup>
+
                </select>
                <p class="msg_erreur">Veuillez sélectionner une date de départ.</p>
-               <p class="msg_erreur">Veuillez sélectionner le nombre de participants.</p>
+               <p class="msg_erreur" id="erreur_participants">Veuillez sélectionner le nombre de participants.</p>
                <p class="msg_erreur">Veuillez sélectionner le nombre d'animaux.</p>
                <label for="date">Date de départ :</label>
                <input type="date" id="date" name="date" value="">
-               <label for="number" class="right">Participants :</label>
-               <input type="number" id="number" name="number" value="">
-               <label for="animaux" class="right">Animaux :</label>
-               <input type="number" id="animaux" name="animaux" value="" min="0" max="2">
+               <label for="nb_participants" class="right">Participants :</label>
+               <input type="number" id="nb_participants" name="nb_participants" value="1" min="0">
+               <label for="nb_animaux" class="right">Animaux :</label>
+               <input type="number" id="nb_animaux" name="nb_animaux" value="0" min="0" max="2">
            </fieldset><!-- end INFOS FORFAIT-->
 
            <!-- INFOS CLIENT-->
            <fieldset>
                <legend>Vos coordonnées</legend>
-               <p class="msg_erreur">Veuillez saisir correctement votre nom.</p>
+               <p class="msg_erreur" id="erreur_nom">Veuillez saisir votre nom.</p>
                <label for="nom">Nom</label>
                <input type="text" id="nom" name="nom" value="">
-               <p class="msg_erreur">Veuillez saisir correctement votre prénom.</p>
+               <p class="msg_erreur"  id="erreur_prenom">Veuillez saisir votre prénom.</p>
                <label for="prenom">Prénom</label>
                <input type="text" id="prenom" name="prenom" value="">
-               <p class="msg_erreur">Veuillez saisir correctement votre courriel.</p>
-               <label for="courriel">Courriel</label>
-               <input type="email" id="courriel" name="courriel" value="">
+               <p class="msg_erreur" id="erreur_email">Veuillez saisir un courriel valide.</p>
+               <label for="email">Courriel</label>
+               <input type="email" id="email" name="email" value="">
                <p class="msg_erreur">Veuillez saisir votre numéro de téléphone au format : (xxx)xxx-xx-xx.</p>
                <label for="tel">Téléphone</label>
                <input type="tel" id="tel" name="tel" value="" placeholder ="(xxx)xxx-xx-xx">
@@ -130,19 +137,19 @@
                        <tr>
                             <td></td>
                             <td id="prix_total">Prix total :</td>
-                            <td>2000 CAD (prix_total JS)</td>
+                            <td>0</td>
                        </tr>
                    </tfoot>
                    <tbody>
                        <tr>
-                           <td>Nom du forfait (JS)</td>
-                           <td>2 (nb_participants saisi par l'utilisateur)</td>
-                           <td>1500 CAD (prix JS)</td>
+                           <td></td>
+                           <td>0</td>
+                           <td>0</td>
                        </tr>
                        <tr>
                            <td>Animaux</td>
-                           <td>1 (nb_participants saisi par l'utilisateur)</td>
-                           <td>20 CAD par jour (prix JS)</td>
+                           <td>0</td>
+                           <td>0</td>
                        </tr>
                    </tbody>
 
@@ -160,7 +167,9 @@
     </div><!-- END wrap -->
     <footer>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="script/main.js"></script>
+    <script src="script/form.js"></script>
 
 </body>
 </html>
