@@ -175,6 +175,10 @@ div ul  {
 
 /************** light BOX ******************/
 
+#modal{
+    background:transparent;
+}
+
 #box{
     height: 633px;
     width: 960px;
@@ -226,12 +230,13 @@ div ul  {
     width: 75%;
     float: left;
     background-color: white;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-#wrap-modal-info-detail-01{
+#wrap-modal-info-detail-01,#wrap-modal-info-detail-02 {
     width: 25%;
     display: inline-block;
-    height: 160px;
     padding: 10px 25px 40px 25px ;
 }
 
