@@ -5,12 +5,13 @@ var monApp = {
     categories: ["Croisières","Sports d'hiver","Nature"],
     produits : [
         {
+            numero: 0,
             nom: "L'atlantique emblématique",
             categorie:"Croisières",
             description: "Le produit 1 bla bla bla...",
             duree:14,
-            debut_saison: new Date("2016-09-01"),
-            fin_saison: new Date("2017-05-31"),
+            debut_saison: "2016-09-01",
+            fin_saison: "2017-05-31",
             mois_basse_saison: "septembre et mai",
             prix_basse_saison: 6890,
             mois_moy_saison: "octobre et avril",
@@ -20,15 +21,16 @@ var monApp = {
             places_dispo: 98,
             nbr_max_animaux_admis: 2,
             prix_animal:99,
-            photo:"croisiere_02.jpg"
+            photo:"images/croisiere_01.jpg"
         },
         {
+            numero: 1,
             nom: "Capitales scandinaves",
             categorie:"Croisières",
             description: "Le produit 1 bla bla bla...",
             duree:18,
-            debut_saison: new Date("2016-04-01"),
-            fin_saison: new Date("2016-10-31"),
+            debut_saison: "2016-04-01",
+            fin_saison: "2016-10-31",
             mois_basse_saison: "avril et octobre",
             prix_basse_saison: 7920,
             mois_moy_saison: "mai et septembret",
@@ -38,15 +40,16 @@ var monApp = {
             places_dispo:  105,
             nbr_max_animaux_admis: 2,
             prix_animal:156,
-            photo:"automne.jpg"
+            photo:"automne.02.jpg"
         },
         {
+            numero: 2,
             nom: "Du groenland au St Laurent",
             categorie:"Croisières",
             description: "Le produit 1 bla bla bla...",
             duree:16,
-            debut_saison: new Date("2016-04-01"),
-            fin_saison: new Date("2016-12-31"),
+            debut_saison: "2016-04-01",
+            fin_saison: "2016-12-31",
             mois_basse_saison: "avril et décembre",
             prix_basse_saison: 7830,
             mois_moy_saison: "mai et novembre",
@@ -56,15 +59,16 @@ var monApp = {
             places_dispo:  56,
             nbr_max_animaux_admis: 0,
             prix_animal: 0 ,
-            photo:"iceberg_01.jpg"
+            photo:"iceberg_03.jpg"
         },
         {
+            numero: 3,
             nom: "Croisière des ours blancs",
             categorie:"Croisières",
             description: "Le produit 1 bla bla bla...",
             duree:12,
-            debut_saison: new Date("2016-05-01"),
-            fin_saison: new Date("2016-11-30"),
+            debut_saison: "2016-05-01",
+            fin_saison: "2016-11-30",
             mois_basse_saison: "mai et novembre",
             prix_basse_saison: 8560,
             mois_moy_saison: "octobre",
@@ -74,15 +78,16 @@ var monApp = {
             places_dispo:  322,
             nbr_max_animaux_admis: 0,
             prix_animal: 0,
-            photo:"ours.02.jpg"
+            photo:"ours.04.jpg"
         },
         {
+            numero: 4,
             nom: "Motoneige (Charlevoix, Québec)",
             categorie:"Sports d'hiver",
             description: "Le produit 1 bla bla bla...",
             duree:1,
-            debut_saison: new Date("2016-12-01"),
-            fin_saison: new Date("2017-04-30"),
+            debut_saison: "2016-12-01",
+            fin_saison: "2017-04-30",
             mois_basse_saison: "décembre",
             prix_basse_saison: 179,
             mois_moy_saison: "avril",
@@ -92,15 +97,16 @@ var monApp = {
             places_dispo:  450,
             nbr_max_animaux_admis: 0,
             prix_animal: 0,
-            photo:"Banff_Parke.jpg"
+            photo:"Banff_Parke.05jpg"
         },
         {
+            numero: 5,
             nom: "Sommets du St Laurent en ski",
             categorie:"Sports d'hiver",
             description: "Le produit 1 bla bla bla...",
             duree:1,
-            debut_saison: new Date("2016-12-01"),
-            fin_saison: new Date("2017-04-30"),
+            debut_saison: "2016-12-01",
+            fin_saison: "2017-04-30",
             mois_basse_saison: "décembre",
             prix_basse_saison: 195,
             mois_moy_saison: "avril",
@@ -110,15 +116,16 @@ var monApp = {
             places_dispo:  341,
             nbr_max_animaux_admis: 0,
             prix_animal: 0 ,
-            photo:"lac_louise.jpg"
+            photo:"lac_louise.06jpg"
         },
         {
+            numero: 6,
             nom: "ski de fond raquette à Tremblant",
             categorie:"Sports d'hiver",
             description: "Le produit 1 bla bla bla...",
             duree:1,
-            debut_saison: new Date("2016-12-01"),
-            fin_saison: new Date("2017-04-30"),
+            debut_saison: "2016-12-01",
+            fin_saison: "2017-04-30",
             mois_basse_saison: "décembre",
             prix_basse_saison: 225,
             mois_moy_saison: "avril",
@@ -128,15 +135,16 @@ var monApp = {
             places_dispo:  256,
             nbr_max_animaux_admis: 0,
             prix_animal: 0 ,
-            photo:"tente.jpg"
+            photo:"tente.07.jpg"
         },
         {
+            numero: 7,
             nom: "Via ferrata des glaces",
             categorie:"Sports d'hiver",
             description: "Le produit 1 bla bla bla...",
             duree:1,
-            debut_saison: new Date("2017-01-01"),
-            fin_saison: new Date("2017-03-31"),
+            debut_saison: "2017-01-01",
+            fin_saison: "2017-03-31",
             mois_basse_saison: "janvier",
             prix_basse_saison: 355,
             mois_moy_saison: "mars",
@@ -146,15 +154,16 @@ var monApp = {
             places_dispo:  268,
             nbr_max_animaux_admis: 0,
             prix_animal: 0 ,
-            photo:"escalade_Husky.jpg"
+            photo:"escalade_Husky.08.jpg"
         },
         {
+            numero: 8,
             nom: "Trekking du grand nord en hydravion",
             categorie:"Nature",
             description: "Le produit 1 bla bla bla...",
             duree:8,
-            debut_saison: new Date("2016-07-15"),
-            fin_saison: new Date("2016-09-15"),
+            debut_saison: "2016-07-15",
+            fin_saison: "2016-09-15",
             mois_basse_saison: "Du 15 au 31 juillet",
             prix_basse_saison: 2680,
             mois_moy_saison: "Du 25 août au 15 septembre",
@@ -164,15 +173,16 @@ var monApp = {
             places_dispo:  82,
             nbr_max_animaux_admis: 2,
             prix_animal:176,
-            photo:"nature.jpg"
+            photo:"nature.09.jpg"
         },
         {
+            numero: 9,
             nom: "Chiens et gîtes du grand nord",
             categorie:"Nature",
             description: "Le produit 1 bla bla bla...",
             duree:7,
-            debut_saison: new Date("2016-10-01"),
-            fin_saison: new Date("2017-05-31"),
+            debut_saison: "2016-10-01",
+            fin_saison: "2017-05-31",
             mois_basse_saison: "octobre et avril",
             prix_basse_saison: 1890,
             mois_moy_saison: "novembre",
@@ -182,15 +192,16 @@ var monApp = {
             places_dispo:  102,
             nbr_max_animaux_admis: 0,
             prix_animal: 0 ,
-            photo:"chiens_traineau.jpg"
+            photo:"chiens_traineau.10.jpg"
         },
         {
+            numero: 10,
             nom: "Au sommet de l'Everest",
             categorie:"Nature",
             description: "Le produit 1 bla bla bla...",
             duree:69,
-            debut_saison: new Date("2016-01-01"),
-            fin_saison: new Date("2016-12-31"),
+            debut_saison: "2016-01-01",
+            fin_saison: "2016-12-31",
             mois_basse_saison: "décembre et janvier",
             prix_basse_saison: 10690,
             mois_moy_saison: "novembre et février",
@@ -200,15 +211,16 @@ var monApp = {
             places_dispo:  65,
             nbr_max_animaux_admis: 0,
             prix_animal: 0 ,
-            photo:"lac_moraine.jpg"
+            photo:"lac_moraine.11.jpg"
         },
         {
+            numero: 11,
             nom: "Sermilik, la route des icebergs",
             categorie:"Nature",
             description: "Le produit 1 bla bla bla...",
             duree:15,
-            debut_saison: new Date("2016-06-15"),
-            fin_saison: new Date("2016-09-15"),
+            debut_saison: "2016-06-15",
+            fin_saison: "2016-09-15",
             mois_basse_saison: "juin",
             prix_basse_saison: 5770,
             mois_moy_saison: "septembre",
@@ -218,7 +230,7 @@ var monApp = {
             places_dispo:  34,
             nbr_max_animaux_admis: 0,
             prix_animal: 0 ,
-            photo:"ours_01.jpg"
+            photo:"ours_12.jpg"
         }
     ]
 };
