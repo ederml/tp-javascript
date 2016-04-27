@@ -361,3 +361,41 @@ p.msg_erreur{
     margin-left:20%;
     padding-left: 5px;
 }
+
+/* personnalisation du datepicker*/
+#ui-datepicker-div{
+    background-color: rgba(216, 112, 0, 0.9);
+    padding:15px;
+    font-family: Arial, Verdana, sans-serif;
+}
+
+.ui-datepicker-title {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14pt;
+    border-bottom: 5px;
+}
+
+span.ui-icon.ui-icon-circle-triangle-w, span.ui-icon.ui-icon-circle-triangle-e  {
+    font-weight: bold;
+    font-size: 10pt;
+}
+
+table.ui-datepicker-calendar th, tr, td {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ui-datepicker-buttonpane.ui-widget-content{
+    margin-top:10px;
+}
+#calendrier {
+    display: inline;
+    position: relative;
+}
+
+button.ui-datepicker-trigger{
+    position: absolute;
+    top: -9px;
+    right: -35px;
+}
