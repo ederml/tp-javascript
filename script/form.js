@@ -49,19 +49,17 @@ function soumettre(){
 
     function valider_form(event) {
         console.log("Le formulaire est soumis (tentative)");
-        var formulaire_ok = true; //par défaut tous les champs sont valides
+        var formulaire_ok = true ;
 
         //CODE DE VALIDATION
 
 
-            // Un forfait doit être sélectionné  DEJA UN PAR DEFAUT
+            // Un forfait doit être sélectionné
             console.log("Forfait sélectionné :", $('#choix_forfait option:selected').val());
-
 
 
             // Un nombre de participants doit être sélectionné  DEJA 1 PAR DEFAUT
             console.log("Nombre de participants sélectionné :", $('#nb_participants').val());
-
 
 
             // Le champ animaux doit s'afficher si le forfait admet les animaux, sinon disabled
@@ -70,13 +68,11 @@ function soumettre(){
             $('#nb_animaux').val();
 
 
-            //////A FAIRE//////
-            // Une date valide doit être sélectionnée :
-            // date >= date de début de saison ET dont la durée totale
-            // (date_debut_saison + duree du séjour) <= date_fin_saison
 
-            // Validation du champ date avec regex
 
+            // Validation du champ date
+        // date >= date de début de saison ET dont la durée totale
+        // (date_debut_saison + duree du séjour) <= date_fin_saison
 
             $("#date_commande").change(function (){
 
@@ -89,11 +85,6 @@ function soumettre(){
                     afficher_date_debut_sejour();
                     afficher_date_fin_sejour();
 
-                        // if (0 == val.length) { //si date vide
-                        //     formulaire_ok = false; //on met à false
-                        //     $(this).addClass("invalid"); //on met la bordure rouge
-                        //     $("#erreur_date").addClass("display"); //on affiche le msg d'erreur
-                        // } // END if
                     }
 
             ); // END change #date_commande
@@ -205,12 +196,12 @@ function soumettre(){
     afficher_duree_sejour();
 
     // Forfait affiché par défaut
-    var nom_forfait = monApp.produits[0].nom;
+    var nom_forfait = monApp.produits[forfait_saisi].nom;
     $("table tbody tr td:first").text("Forfait : " + nom_forfait);
     console.log(nom_forfait);
 
     //Prix du forfait qui s'affiche par défaut
-    var prix_unitaire = monApp.produits[0].prix_basse_saison;
+    var prix_unitaire = monApp.produits[forfait_saisi].prix_basse_saison;
     $("table tbody tr:first-of-type td:last").text(prix_unitaire + " CAD");
 
     //Nombre de participants affiché par défaut
@@ -228,6 +219,22 @@ function soumettre(){
     console.log("prix total qui s'affiche par défaut", prix_total);
 
 
+
+/**********************************************************************************************
+// ANIMAUX PERDUS
+var nbr_animaux_admis = monApp.produits[forfait_saisi].nbr_max_animaux_admis;
+console.log("nbr max animaux admis :", nbr_animaux_admis);
+ $("#nb_animaux").val(nbr_animaux_admis);
+**********************************************************************************************/
+
+
+
+
+
+
+
+
+
 // RÉCUPÉRATION DES VALEURS
 
     // Forfait sélectionné
@@ -242,32 +249,8 @@ function soumettre(){
             afficher_date_debut_sejour();
             calculer_prix_voyageurs();
             calculer_prix_total();
+            afficher_champ_animaux();
 
-            // Afficher ou cacher le champ des Animaux selon si le forfait les admet ou pas
-            console.groupCollapsed("afficher le champ animaux :");
-            // forfait_saisi = $("#choix_forfait option:selected").val().trim();
-            console.log("valeur du forfait saisi:", forfait_saisi);
-
-            // if (( 0 !== monApp.produits[forfait_saisi].nbr_max_animaux_admis)
-            //    ||  ( 1 !== monApp.produits[forfait_saisi].nbr_max_animaux_admis)
-            //     ||  ( 8 !== monApp.produits[forfait_saisi].nbr_max_animaux_admis)) {
-            //
-            //     $("#nb_animaux").hide();
-            //     $("#nb_animaux").prev().hide();
-            //     $("table tbody tr:nth-of-type(2)").hide();
-            //     console.log("forfait saisi n'admet pas les animaux");
-            //
-            // }
-
-            // } else {
-            //
-            //     $("#nb_animaux").show();
-            //     $("#nb_animaux").prev().show();
-            //     $("table tbody tr:nth-of-type(2)").show();
-            //     console.log("forfait saisi admet les animaux");
-            //
-            //
-            // }
             console.groupEnd();
 
             return resultat;
@@ -421,7 +404,6 @@ function calculer_prix_total() {
 
 
 
-
 /**
  * Afficher la date du début du séjour en fonction de la date saisie par l'utilisateur
  */
@@ -510,29 +492,46 @@ function valider_date(){
     var date_saisie = new Date($("#date_commande").val());
     console.log("Date saisie :", date_saisie);
     console.log("Date saisie à comparer :", date_saisie);
-    console.log("date saisie en millisecondes :", date_saisie.getTime() );
+    date_saisie = date_saisie.getTime(date_saisie);
+    console.log("date saisie en millisecondes :", date_saisie);
 
     //conversion date début saison en millisecondes
-    var date_debut_saison = monApp.produits[forfait_saisi].debut_saison;
+    var date_debut_saison = new Date(monApp.produits[forfait_saisi].debut_saison);
     console.log("Valeur forfait saisi :", forfait_saisi);
     console.log("Date debut saison", date_debut_saison);
+    date_debut_saison = date_debut_saison.getTime(date_debut_saison);
+    console.log("Date debut saison en ms", date_debut_saison);
 
     //conversion date fin saison en millisecondes
-    var date_fin_saison = monApp.produits[forfait_saisi].fin_saison;
+    var date_fin_saison = new Date(monApp.produits[forfait_saisi].fin_saison);
     console.log("Valeur forfait saisi :", forfait_saisi);
     console.log("Date fin saison", date_fin_saison);
+    date_fin_saison = date_fin_saison.getTime(date_fin_saison);
+    console.log("Date fin saison en ms", date_fin_saison );
+
+    $("#date_commande").removeClass("invalid");
+    $("#erreur_date").removeClass("display");
+
+    if  ( (date_saisie <= date_debut_saison) || (date_saisie >= date_fin_saison) || (date_saisie == "") )  {
+        var formulaire_ok = true;
+        formulaire_ok = false;
+        console.log("date saisie invalide");
+        $("#date_commande").addClass("invalid"); //on met la bordure rouge
+
+        // afficher les dates de début et fin de saison du forfait choisi dans le message d'erreur
+        $("#erreur_date").text("La date de départ doit être entre le " + monApp.produits[forfait_saisi].debut_saison + " et le " + monApp.produits[forfait_saisi].fin_saison + "."); //on affiche le msg d'erreur
+        $("#erreur_date").addClass("display"); //on affiche le msg d'erreur
+
+    } else {
+
+        console.log("date saisie valide");
+
+    } // END if ... else
 
 
     console.groupEnd();
-
+    //return
 } // END valider_date()
-
-
-
-
-
-
-
 
 
 
@@ -558,7 +557,40 @@ function afficher_duree_sejour(){
 } // END afficher_duree_sejour()
 
 
-
+// function afficher_champ_animaux(){
+//
+//     // $("#nb_animaux").val(nbr_animaux_admis);
+//
+// //Afficher ou cacher le champ des Animaux selon si le forfait les admet ou pas
+// console.groupCollapsed("afficher le champ animaux :");
+// forfait_saisi = $("#choix_forfait option:selected").val().trim();
+// console.log("valeur du forfait saisi:", forfait_saisi);
+//
+// if (
+//     ( 0 == $("#choix_forfait option:selected").val().trim())
+//     ||  ( 1 == $("#choix_forfait option:selected").val().trim())
+//     ||  ( 8 == $("#choix_forfait option:selected").val().trim())
+//     )
+//
+//     {
+//
+//     $("#nb_animaux").hide();
+//     $("#nb_animaux").prev().hide();
+//     $("table tbody tr:nth-of-type(2)").hide();
+//     console.log("forfait saisi n'admet pas les animaux");
+//
+//
+//     } else {
+//
+//         $("#nb_animaux").show();
+//         $("#nb_animaux").prev().show();
+//         $("table tbody tr:nth-of-type(2)").show();
+//         console.log("forfait saisi admet les animaux");
+//
+//     }
+//
+//
+// } // END afficher_champs_animaux ()
 
 
 
