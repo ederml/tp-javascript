@@ -1,0 +1,293 @@
+body {
+    margin: 0 auto;
+    background: url("../images/background.jpg") no-repeat center top;
+    background-color: #e7e8ea;
+    width: 100%;
+
+
+}
+#wrap{
+    width: 960px;
+    height: inherit;
+    margin: 0 auto;
+
+}
+
+header{
+    padding-top: 50px;
+    height: 110px;
+}
+
+
+/******************* BANNER ***********************/
+
+#banner{
+    position: relative;
+    overflow: hidden;
+    padding-left: 73px;
+    top: 50%;
+    height: 473px;
+
+}
+
+#banner img {
+    position: absolute;
+    z-index: 1;
+    display: none;
+
+}
+
+#banner p{
+    z-index: 2;
+    position: absolute;
+
+
+}
+
+#slider{
+    width: 100%;
+    height: 408px;
+    display: inline-block;
+
+}
+
+
+
+.main{
+    height: 850px;
+    margin-top: 55px;
+}
+
+#categories {
+
+    height: 307px;
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+}
+#for-content{
+    margin-top: 50px;
+    position: absolute;
+    left: 0px;
+
+}
+.forfait{
+    float: left;
+}
+.forfait2{
+    margin-left: 21px;
+    float: right;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    display: inline;
+    float: left;
+}
+
+.logo{
+    margin-left: 300px;
+    float: left;
+}
+.menu{
+    float: right;
+
+}
+
+#for-categorie{
+
+}
+
+.forfait_categorie{
+    height: 535px;
+    background-color: #d87000;
+    float: left;
+
+}
+.forfait_categorie2{
+    height: 535px;
+    background-color: #d87000;
+    float: right;
+
+}
+h2{
+    font-family: "Bebas Neue";
+    font-size: 40pt;
+    line-height: 30%;
+}
+
+header h2{
+    font-family: "Bebas Neue";
+    font-size: 18pt;
+    line-height: 30%;
+}
+h3{
+    font-family: "Bebas Neue";
+    font-size: 18pt;
+}
+h4{
+    font-family: "Arial";
+    font-size: 12pt;
+    line-height: 10%;
+
+}
+a{
+    text-decoration: none;
+}
+
+div ul  {
+    display: inline;
+
+}
+
+/************** light BOX ******************/
+
+#box{
+    height: 633px;
+    width: 960px;
+    background-color: #d87000;
+    display: inline-block;
+
+}
+
+#box-img{
+    width: 722px;
+    height: 395px;
+    background-color: blue;
+    float: left;
+}
+#box-info{
+    width: 722px;
+    height: 238px;
+    background-color: green;
+    float: left;
+
+}
+#box-prix-reserve{
+    width: 238px;
+    height: 633px;
+    background-color: yellow;
+    float: right;
+}
+/************** Footer  ******************/
+
+footer{
+    height: 90px;
+    background-image: url(../images/footer.jpg);
+}
+
+
+
+
+
+
+
+
+
+/*******************  slider *********************/
+.fadeslider{
+    width: 400px;
+    height: 200px;
+    float: left;
+    position: relative;
+    text-align:center;
+}
+.fadeslider .slide{
+    position: absolute;
+    top:0;
+    display:none;
+}
+.fadeslider .slide:nth-child(1){
+    display:block;
+}
+.fadeslider .slide .text{
+    position: absolute;
+    top:0;
+    width: 100%;
+    line-height:200px;
+    color:#fff;
+    background:rgba(0,0,0,0.3);
+    font-size:18px;
+}
+.slideback{
+    width: 40px;
+    height: 40px;
+    position:absolute;
+    background:rgba(0,0,0,0.6);
+    color:#fff;
+    top:190px;
+    left:0;
+    line-height:40px;
+    cursor:pointer;
+}
+.slideback:hover,.slidenext:hover{
+    background:rgba(0,0,0,1);
+}
+.slidenext{
+    width: 40px;
+    height: 40px;
+    position:absolute;
+    background:rgba(0,0,0,0.4);
+    color:#fff;
+    top:190px;
+    right:0;
+    line-height:40px;
+    cursor:pointer;
+}
+.slidelist{
+    position: absolute;
+    bottom:20px;
+    left:20px;
+}
+.slidelist div{
+    width: 7.5px;
+    height: 7.5px;
+    background: orange;
+    float: left;
+    margin-right:10px;
+    transition:300ms;
+    border:1.25px solid orange;
+}
+.slidelist div.active{
+    width: 7.5px;
+    height: 7.5px;
+    border:1.25px solid orange;
+}
+
+.slidelist div.active{
+    background: #505050;
+}
+
+.rabais_img,#rabais_img2{
+    width:568px;
+    height: 408px;
+    float: left;
+}
+.rabais-contenu,#rabais-contenu2{
+
+    padding: 30px 30px 0 30px ;
+    width: 332px;
+    float: right;
+    height: 202px;
+    background-color: white;
+
+
+}
+.rabais-prix,#rabais-prix2{
+    background-color: #d87000;
+    padding: 10px 30px 0 30px ;
+    width: 332px;
+    height: 166px;
+    float: right;
+}
+.prix{
+    /*font-family: "Bebas Neue";*/
+    font-size: 50pt;
+    color: white;
+    line-height: 10%;
+
+}

@@ -26,13 +26,17 @@ function insérer_texte() {
     $('#img3 p:eq(1) span').text(monApp.produits[2].debut_saison);
     $('#img4 p:eq(1) span').text(monApp.produits[3].debut_saison);
     $('#img1 p:eq(2) span').text(monApp.produits[0].fin_saison);
-    $('#img1 p:eq(2) span').text(monApp.produits[1].fin_saison);
-    $('#img1 p:eq(2) span').text(monApp.produits[2].fin_saison);
-    $('#img1 p:eq(2) span').text(monApp.produits[3].fin_saison);
+    $('#img2 p:eq(2) span').text(monApp.produits[1].fin_saison);
+    $('#img3 p:eq(2) span').text(monApp.produits[2].fin_saison);
+    $('#img4 p:eq(2) span').text(monApp.produits[3].fin_saison);
     $('#img1 p:eq(3) span').text(monApp.produits[0].prix_basse_saison);
     $('#img2 p:eq(3) span').text(monApp.produits[1].prix_basse_saison);
     $('#img3 p:eq(3) span').text(monApp.produits[2].prix_basse_saison);
     $('#img4 p:eq(3) span').text(monApp.produits[3].prix_basse_saison);
+    $('#img1 p:eq(4)').text(monApp.produits[0].numero);
+    $('#img2 p:eq(4)').text(monApp.produits[1].numero);
+    $('#img3 p:eq(4)').text(monApp.produits[2].numero);
+    $('#img4 p:eq(4)').text(monApp.produits[3].numero);
 
     $("#cs_tab_controls button").click(function () {
         console.log('La machine est lançée')
@@ -66,6 +70,10 @@ function insérer_texte() {
             $('#img2 p:eq(3) span').text(monApp.produits[1].prix_basse_saison);
             $('#img3 p:eq(3) span').text(monApp.produits[2].prix_basse_saison);
             $('#img4 p:eq(3) span').text(monApp.produits[3].prix_basse_saison);
+            $('#img1 p:eq(4)').text(monApp.produits[0].numero);
+            $('#img1 p:eq(4)').text(monApp.produits[1].numero);
+            $('#img1 p:eq(4)').text(monApp.produits[2].numero);
+            $('#img1 p:eq(4)').text(monApp.produits[3].numero);
             console.log("croisière");
         } else if (test == 'por') {
             $('.cs_forfait_categorie h4').text(monApp.categories[1]);
@@ -86,13 +94,17 @@ function insérer_texte() {
             $('#img3 p:eq(1) span').text(monApp.produits[6].debut_saison);
             $('#img4 p:eq(1) span').text(monApp.produits[7].debut_saison);
             $('#img1 p:eq(2) span').text(monApp.produits[4].fin_saison);
-            $('#img1 p:eq(2) span').text(monApp.produits[5].fin_saison);
-            $('#img1 p:eq(2) span').text(monApp.produits[6].fin_saison);
-            $('#img1 p:eq(2) span').text(monApp.produits[7].fin_saison);
+            $('#img2 p:eq(2) span').text(monApp.produits[5].fin_saison);
+            $('#img3 p:eq(2) span').text(monApp.produits[6].fin_saison);
+            $('#img4 p:eq(2) span').text(monApp.produits[7].fin_saison);
             $('#img1 p:eq(3) span').text(monApp.produits[4].prix_basse_saison);
             $('#img2 p:eq(3) span').text(monApp.produits[5].prix_basse_saison);
             $('#img3 p:eq(3) span').text(monApp.produits[6].prix_basse_saison);
             $('#img4 p:eq(3) span').text(monApp.produits[7].prix_basse_saison);
+            $('#img1 p:eq(4)').text(monApp.produits[4].numero);
+            $('#img2 p:eq(4)').text(monApp.produits[5].numero);
+            $('#img3 p:eq(4)').text(monApp.produits[6].numero);
+            $('#img4 p:eq(4)').text(monApp.produits[7].numero);
             console.log("sports d'hiver");
         } else if (test == 'atu') {
             $('.cs_forfait_categorie h4').text(monApp.categories[2]);
@@ -113,18 +125,70 @@ function insérer_texte() {
             $('#img3 p:eq(1) span').text(monApp.produits[10].debut_saison);
             $('#img4 p:eq(1) span').text(monApp.produits[11].debut_saison);
             $('#img1 p:eq(2) span').text(monApp.produits[8].fin_saison);
-            $('#img1 p:eq(2) span').text(monApp.produits[9].fin_saison);
-            $('#img1 p:eq(2) span').text(monApp.produits[10].fin_saison);
-            $('#img1 p:eq(2) span').text(monApp.produits[11].fin_saison);
+            $('#img2 p:eq(2) span').text(monApp.produits[9].fin_saison);
+            $('#img3 p:eq(2) span').text(monApp.produits[10].fin_saison);
+            $('#img4 p:eq(2) span').text(monApp.produits[11].fin_saison);
             $('#img1 p:eq(3) span').text(monApp.produits[8].prix_basse_saison);
             $('#img2 p:eq(3) span').text(monApp.produits[9].prix_basse_saison);
             $('#img3 p:eq(3) span').text(monApp.produits[10].prix_basse_saison);
             $('#img4 p:eq(3) span').text(monApp.produits[11].prix_basse_saison);
+            $('#img1 p:eq(4)').text(monApp.produits[8].numero);
+            $('#img2 p:eq(4)').text(monApp.produits[9].numero);
+            $('#img3 p:eq(4)').text(monApp.produits[10].numero);
+            $('#img4 p:eq(4)').text(monApp.produits[11].numero);
             console.log("Catégorie nature");
         }
+
+
     });
+    $(".cs_forfait_categorie").click(function () {
+        console.log('En avant');
+        var row_items = this.getElementsByTagName("p");
+        console.log("Dernier des p : ", row_items[row_items.length-1]);
+        var i = row_items[row_items.length-1].innerHTML;
+        console.log(i);
+        $('#wrap-modal-info h3').text(monApp.produits[i].categorie);
+        $('#wrap-modal-info h2').text(monApp.produits[i].nom);
+        $('#wrap-modal-info-detail-01 ul li:first span').text(monApp.produits[i].debut_saison);
+        $('#wrap-modal-info-detail-01 ul li:eq(1) span').text(monApp.produits[i].fin_saison);
+        $('#wrap-modal-info-detail-01 ul li:eq(2) span').text(monApp.produits[i].duree);
+        $('#wrap-modal-info-detail-02 ul li:first span').text(monApp.produits[i].nb_animaux);
+        $('#wrap-modal-info-detail-02 ul li:eq(1) span').text(monApp.produits[i].prix_animal);
+
+        openDialog('#eula');
+
+    });
+
+    function openDialog(selector) {  // le paramètre du sélecteur est le document à afficher
+        console.log('Ouverture de ');
+        $(selector)
+            .clone(selector)
+            .find('.ok, .cancel')    // sélectionne les deux liens a de fermeture
+            .on('click', function(){
+                closeDialog(this);  // Appel de close dialog avec l'élément a
+            })
+            .end()  // remonter sur la sélection avant le find (l'élément cloné)
+            .appendTo('#overlay')
+            .show()
+            .parent()  // c'est le overlay
+            .fadeIn();
+    }
+
+// Fermer la boite de dialogue
+    function fermermodal() {
+        console.log('Ouverture de ', selector);
+        $('#eula').on('click', function(){$(this)
+            .parents('#overlay')  // Inverse de find! Il remonte au lieu de descendre parmi les ancêtres
+            .fadeOut('fast', function () {
+                $(this)
+            })
+        })
+    }
+
+    fermermodal();
 };
     insérer_texte();
+
 });
 
 
