@@ -21,7 +21,8 @@ var monApp = {
             places_dispo: 98,
             nbr_max_animaux_admis: 2,
             prix_animal:99,
-            photo:"images/croisiere_01.jpg"
+            photo:"images/images-modal/croisiere_01.jpg",
+            photo_cat:"images/categorie/iceberg_01.jpg"
         },
         {
             numero: 1,
@@ -40,7 +41,8 @@ var monApp = {
             places_dispo:  105,
             nbr_max_animaux_admis: 2,
             prix_animal:156,
-            photo:"automne.02.jpg"
+            photo:"images/images-modal/Banff_Parke.jpg",
+            photo_cat:"images/categorie/croisiere_01.jpg"
         },
         {
             numero: 2,
@@ -59,7 +61,8 @@ var monApp = {
             places_dispo:  56,
             nbr_max_animaux_admis: 0,
             prix_animal: 0 ,
-            photo:"iceberg_03.jpg"
+            photo:"images/images-modal/iceberg_02.jpg",
+            photo_cat:"images/categorie/croisiere_02.jpg"
         },
         {
             numero: 3,
@@ -78,7 +81,8 @@ var monApp = {
             places_dispo:  322,
             nbr_max_animaux_admis: 0,
             prix_animal: 0,
-            photo:"ours.04.jpg"
+            photo:"images/images-modal/ours_01.jpg",
+            photo_cat:"images/categorie/ours_02.jpg"
         },
         {
             numero: 4,
@@ -97,7 +101,8 @@ var monApp = {
             places_dispo:  450,
             nbr_max_animaux_admis: 0,
             prix_animal: 0,
-            photo:"Banff_Parke.05jpg"
+            photo:"images/images-modal/escalade_Husky.jpg",
+            photo_cat:"images/categorie/tente.jpg"
         },
         {
             numero: 5,
@@ -116,7 +121,8 @@ var monApp = {
             places_dispo:  341,
             nbr_max_animaux_admis: 0,
             prix_animal: 0 ,
-            photo:"lac_louise.06jpg"
+            photo:"images/images-modal/ski.jpg",
+            photo_cat:"images/categorie/station_ski.jpg"
         },
         {
             numero: 6,
@@ -135,7 +141,8 @@ var monApp = {
             places_dispo:  256,
             nbr_max_animaux_admis: 0,
             prix_animal: 0 ,
-            photo:"tente.07.jpg"
+            photo:"images/images-modal/station_ski.jpg",
+            photo_cat:"images/categorie/ski.jpg"
         },
         {
             numero: 7,
@@ -154,11 +161,12 @@ var monApp = {
             places_dispo:  268,
             nbr_max_animaux_admis: 0,
             prix_animal: 0 ,
-            photo:"escalade_Husky.08.jpg"
+            photo:"images/images-modal/aventure_01.jpg",
+            photo_cat:"images/categorie/lac_louise.jpg"
         },
         {
             numero: 8,
-            nom: "Trekking du grand nord en hydravion",
+            nom: "Le grand nord en hydravion",
             categorie:"Nature",
             description: "Le produit 1 bla bla bla...",
             duree:8,
@@ -173,7 +181,8 @@ var monApp = {
             places_dispo:  82,
             nbr_max_animaux_admis: 2,
             prix_animal:176,
-            photo:"nature.09.jpg"
+            photo:"images/images-modal/pingouins.jpg",
+            photo_cat:"images/categorie/lac_moraine.jpg"
         },
         {
             numero: 9,
@@ -192,7 +201,8 @@ var monApp = {
             places_dispo:  102,
             nbr_max_animaux_admis: 0,
             prix_animal: 0 ,
-            photo:"chiens_traineau.10.jpg"
+            photo:"images/images-modal/chiens_traineau.jpg",
+            photo_cat:"images/categorie/Caribou.jpg"
         },
         {
             numero: 10,
@@ -211,7 +221,8 @@ var monApp = {
             places_dispo:  65,
             nbr_max_animaux_admis: 0,
             prix_animal: 0 ,
-            photo:"lac_moraine.11.jpg"
+            photo:"images/images-modal/nature.jpg",
+            photo_cat:"images/categorie/aventure_01.jpg"
         },
         {
             numero: 11,
@@ -230,7 +241,8 @@ var monApp = {
             places_dispo:  34,
             nbr_max_animaux_admis: 0,
             prix_animal: 0 ,
-            photo:"ours_12.jpg"
+            photo:"images/images-modal/iceberg_01.jpg",
+            photo_cat:"images/categorie/iceberg_02.jpg"
         }
     ]
 };
