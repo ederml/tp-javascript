@@ -146,8 +146,14 @@
            </fieldset><!-- end INFOS FORFAIT-->
 
            <!-- TABLEAU RÉCAPITULATIF-->
-
+           <div id="overlay">
+               <div id="rideau"></div>
+           </div>
            <fieldset id = "recapitulatif">
+               <div class="buttons">
+                   <a href="" class="ok">ok</a>
+                   <a href="" class="cancel">X</a>
+               </div>
                <legend>Récapitulatif de votre réservation</legend>
                <div id="details_recapitulatif">
                    <h4>Détails de votre forfait :</h4>
@@ -156,11 +162,8 @@
                        <li>Fin du séjour : <span id="date_fin"></span></li>
                        <li>Durée du séjour : <span id="duree"></span> </li>
                        <li>Options et coût du séjour :</li>
-
                    </ul>
-
                </div>
-
                <table>
                    <thead>
                        <tr>
@@ -195,9 +198,9 @@
 
            </fieldset><!-- end TABLEAU RÉCAPITULATIF -->
 
-           <input type="submit" value="Réserver">
+           <a href="#"><input id="btn_submit" type="submit" value="Réserver"></a>
 
-           </form><!-- END form -->
+       </form><!-- END form -->
         </div><!-- END body -->
     </div><!-- END wrap -->
     <footer>
@@ -207,6 +210,7 @@
     <script src="script/jquery.ui.datepicker-fr.js"></script>
     <script src="script/main.js"></script>
     <script src="script/form.js"></script>
+    <script src="script/reserv_modal.js"></script>
 
 </body>
 </html>
